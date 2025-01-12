@@ -137,4 +137,84 @@ body {
     margin-top: 20px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
+  a{
+    text-decoration: none;
+  }
+
+  .description-pdf{
+    text-align: left;
+    font-size: small;
+  }
+
+  /* Index.html CSS */
+
+  .navbar-custom {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  }
+  .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+    color: #ffffff;
+  }
+  .navbar-custom .nav-link:hover {
+    color: #d1d5db;
+  }
+  .navbar-custom .dropdown-menu {
+    background-color: #2563eb;
+    border: none;
+  }
+  .navbar-custom .dropdown-item {
+    color: #ffffff;
+  }
+  .navbar-custom .dropdown-item:hover {
+    background-color: #1e3a8a;
+  }
+  .hero-section {
+    background: url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+  .hero-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 10px 25px;
+  }
+  .hero-button:hover {
+    background-color: #1e3a8a;
+  }
+
+
+  /* Library.html */
+/*   
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  .search-bar {
+    border-radius: 9999px;
+    border: 2px solid #1e3a8a;
+    padding: 8px 15px;
+  }
+  .search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
+  }
+  .footer {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+  .footer a {
+    color: #d1d5db;
+  }
+  .footer a:hover {
+    color: #ffffff;
+  }
+  embed {
+  width: 100%;
+  height: 100vh; 
+  }
+ */
