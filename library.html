@@ -13,12 +13,42 @@
 
   <!-- Font Awesome (optional, for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+    .search-bar {
+      border-radius: 9999px;
+      border: 2px solid #1e3a8a;
+      padding: 8px 15px;
+    }
+    .search-bar:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
+    }
+    .footer {
+      background-color: #1e3a8a;
+      color: #ffffff;
+    }
+    .footer a {
+      color: #d1d5db;
+    }
+    .footer a:hover {
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand text-primary fw-bold" href="index.html">PDF Viewer</a>
+      <a class="navbar-brand text-primary fw-bold" href="index.html">
+        <i class="fas fa-book-reader"></i> PDF Viewer
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,7 +73,7 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="fw-bold">Library</h1>
-        <input type="text" class="form-control w-50" id="searchBar" placeholder="Search for a document...">
+        <input type="text" class="form-control search-bar w-50" id="searchBar" placeholder="Search for a document...">
       </div>
       <div class="row" id="libraryContainer">
         <!-- Example PDF Item -->
@@ -58,15 +88,21 @@
             </div>
           </div>
         </div>
-        <!-- Add more PDF items dynamically -->
+        <!-- Add more items dynamically -->
+        <!-- Example placeholder for dynamic items -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
+  <footer class="footer py-4">
     <div class="container text-center">
-      <p class="mb-0">&copy; 2025 PDF Viewer Website. All rights reserved.</p>
+      <p class="mb-1">&copy; 2025 PDF Viewer Website. All rights reserved.</p>
+      <p>
+        <a href="about.html">About</a> | 
+        <a href="contact.html">Contact</a> | 
+        <a href="help.html">Help</a>
+      </p>
     </div>
   </footer>
 
@@ -82,10 +118,10 @@
       const query = searchBar.value.toLowerCase();
       const items = libraryContainer.getElementsByClassName('col-md-4');
 
-      for (let item of items) {
+      Array.from(items).forEach(item => {
         const title = item.querySelector('.card-title').textContent.toLowerCase();
         item.style.display = title.includes(query) ? '' : 'none';
-      }
+      });
     });
   </script>
 </body>
