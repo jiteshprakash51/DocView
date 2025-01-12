@@ -75,29 +75,47 @@
             <div class="card-body text-center">
               <i class="fas fa-file-pdf fa-3x text-primary mb-3"></i>
               <h5 class="card-title">Think Grow Rich</h5>
-              <p class="description-pdf">"Think and Grow Rich" is a classic personal development book by Napoleon Hill that outlines thirteen steps to achieving success and wealth, both financial and personal. It emphasizes the importance of self-confidence, goal-setting, and unleashing one's potential. The book has been highly influential in shaping modern views on success and is considered a foundational text in the self-help genre.</p>
               <a href="https://www.terabox.com/pfile/docview?path=%2FStudy%2FBooks%2FPsychology%20Books%2FPDF%2FThink-And-Grow-Rich_2011-06.pdf&client=web&scene=main" target="_blank" class="btn btn-primary btn-sm">View</a>
-              <a href="" class="btn btn-secondary btn-sm">Download</a>
+              <!-- Button to toggle summary visibility -->
+              <button class="btn btn-secondary btn-sm" onclick="toggleSummary('summary_think-grow-rich')">Summary</button>
+              <p id="summary_think-grow-rich" class="description-pdf" style="display: none;">"Think and Grow Rich" is a classic personal development book by Napoleon Hill that outlines thirteen steps to achieving success and wealth, both financial and personal. It emphasizes the importance of self-confidence, goal-setting, and unleashing one's potential. The book has been highly influential in shaping modern views on success and is considered a foundational text in the self-help genre.</p>
             </div>
           </div>
         </div>
+                
         <!-- Add more items dynamically -->
         <div class="col-md-4 mb-4">
           <div class="card shadow-sm">
             <div class="card-body text-center">
               <i class="fas fa-file-pdf fa-3x text-primary mb-3"></i>
-              <h5 class="card-title">Sample PDF 1</h5>
-              <p class="description-pdf">A short description of the document.</p>
+              <h5 class="card-title">Scrabble</h5>
               <a href="assets/pdfs/sample1.pdf" target="_blank" class="btn btn-primary btn-sm">View</a>
-              <a href="assets/pdfs/sample1.pdf" download class="btn btn-secondary btn-sm">Download</a>
+              <!-- Button to toggle summary visibility -->
+              <button class="btn btn-secondary btn-sm" onclick="toggleSummary('summary_sample1')">Summary</button>
+              <p id="summary_sample1" class="description-pdf" style="display: none;">Rules and regulations for scrabble</p>
             </div>
           </div>
         </div>
-        <!-- Example placeholder for dynamic items -->
+        
+        <!-- Another Example PDF Item -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-file-pdf fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Sample</h5>
+              <a href="assets/pdfs/sample1.pdf" target="_blank" class="btn btn-primary btn-sm">View</a>
+              <!-- Button to toggle summary visibility -->
+              <button class="btn btn-secondary btn-sm" onclick="toggleSummary('summary_sample2')">Summary</button>
+              <p id="summary_sample2" class="description-pdf" style="display: none;">Hi</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
+  
+  
+  
   <!-- Footer -->
   <footer class="footer py-4">
     <div class="container text-center">
@@ -128,6 +146,20 @@
         item.style.display = title.includes(query) ? '' : 'none';
       });
     });
+  </script>
+  <script>
+    function toggleSummary(summaryId) {
+      var summary = document.getElementById(summaryId);
+      var button = event.target;
+  
+      if (summary.style.display === "none") {
+        summary.style.display = "block";
+        button.textContent = "Hide Summary"; // Change button text
+      } else {
+        summary.style.display = "none";
+        button.textContent = "Summary"; // Reset button text
+      }
+    }
   </script>
 
 </body>
